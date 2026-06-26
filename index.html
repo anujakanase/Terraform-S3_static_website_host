@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Anuja Kanase | DevOps Engineer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:'Poppins',sans-serif;
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:#050816;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+/* Animated Background */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:700px;
+
+height:700px;
+
+background:#4f46e5;
+
+filter:blur(220px);
+
+left:-250px;
+
+top:-250px;
+
+opacity:.25;
+
+animation:blob1 15s infinite alternate;
+
+z-index:-3;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:700px;
+
+height:700px;
+
+background:#06b6d4;
+
+filter:blur(220px);
+
+right:-250px;
+
+bottom:-250px;
+
+opacity:.25;
+
+animation:blob2 15s infinite alternate;
+
+z-index:-3;
+
+}
+
+@keyframes blob1{
+
+to{
+
+transform:translate(250px,150px);
+
+}
+
+}
+
+@keyframes blob2{
+
+to{
+
+transform:translate(-200px,-150px);
+
+}
+
+}
+
+/* Navbar */
+
+header{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+padding:20px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(5,8,22,.75);
+
+backdrop-filter:blur(15px);
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#4cc9f0;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:28px;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#4cc9f0;
+
+}
+
+/* Hero */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:120px 8%;
+
+gap:70px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-left{
+
+flex:1;
+
+}
+
+.hero-left h3{
+
+font-size:22px;
+
+font-weight:400;
+
+margin-bottom:10px;
+
+}
+
+.hero-left h1{
+
+font-size:68px;
+
+font-weight:700;
+
+line-height:1.1;
+
+margin-bottom:20px;
+
+}
+
+.hero-left span{
+
+color:#4cc9f0;
+
+}
+
+.typing{
+
+font-size:30px;
+
+font-weight:600;
+
+height:45px;
+
+color:#06b6d4;
+
+margin-bottom:25px;
+
+}
+
+.hero-left p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#d8d8d8;
+
+max-width:650px;
+
+}
+
+.buttons{
+
+margin-top:40px;
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:15px 35px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+.primary{
+
+background:#4cc9f0;
+
+color:#05111d;
+
+}
+
+.secondary{
+
+border:2px solid #4cc9f0;
+
+color:white;
+
+}
+
+.btn:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 0 25px #4cc9f0;
+
+}
+
+/* Photo */
+
+.hero-right{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.photo{
+
+width:380px;
+
+height:380px;
+
+border-radius:50%;
+
+overflow:hidden;
+
+border:6px solid #4cc9f0;
+
+box-shadow:0 0 40px #4cc9f0;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+.photo img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+/* Floating Tech Badges */
+
+.tech{
+
+margin-top:45px;
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.tech span{
+
+padding:12px 20px;
+
+border-radius:40px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+transition:.3s;
+
+}
+
+.tech span:hover{
+
+transform:translateY(-8px);
+
+background:#4cc9f0;
+
+color:#05111d;
+
+}
+
+/* Stats */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:25px;
+
+padding:0 8% 80px;
+
+}
+
+.stat{
+
+padding:35px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:20px;
+
+text-align:center;
+
+backdrop-filter:blur(12px);
+
+transition:.4s;
+
+}
+
+.stat:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px #4cc9f0;
+
+}
+
+.stat h2{
+
+font-size:42px;
+
+color:#4cc9f0;
+
+margin-bottom:10px;
+
+}
+
+section{
+
+padding:90px 8%;
+
+}
+
+.section-title{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+text-align:center;
+
+}
+
+.section-title span{
+
+color:#4cc9f0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Anuja.
+</div>
+
+<nav>
+
+<a href="#about">About</a>
+
+<a href="#skills">Skills</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h3>Hello 👋 I'm</h3>
+
+<h1>
+
+Anuja <span>Kanase</span>
+
+</h1>
+
+<div class="typing">
+
+<span id="typing"></span>
+
+</div>
+
+<p>
+
+Passionate DevOps & Cloud Engineer focused on building scalable cloud infrastructure, automating CI/CD pipelines, and deploying cloud-native applications using AWS, Docker, Kubernetes, Terraform, Jenkins, and modern DevOps practices.
+
+</p>
+
+<div class="buttons">
+
+<a href="#projects" class="btn primary">
+
+View Projects
+
+</a>
+
+<a href="resume.pdf" class="btn secondary">
+
+Download Resume
+
+</a>
+
+</div>
+
+<div class="tech">
+
+<span><i class="fab fa-aws"></i> AWS</span>
+
+<span><i class="fab fa-docker"></i> Docker</span>
+
+<span>☸ Kubernetes</span>
+
+<span>Terraform</span>
+
+<span>Jenkins</span>
+
+<span>Linux</span>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="photo">
+
+<!-- Replace with your uploaded photo -->
+
+<img src="profile.png" alt="Anuja Kanase">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+
+<h2>6+</h2>
+
+<p>Cloud Projects</p>
+
+</div>
+
+<div class="stat">
+
+<h2>12+</h2>
+
+<p>Microservices</p>
+
+</div>
+
+<div class="stat">
+
+<h2>8+</h2>
+
+<p>CI/CD Pipelines</p>
+
+</div>
+
+<div class="stat">
+
+<h2>100%</h2>
+
+<p>Learning Mindset</p>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- ABOUT SECTION -->
+<!-- ========================= -->
+
+<section id="about">
+
+<h2 class="section-title">
+About <span>Me</span>
+</h2>
+
+<div class="about-container">
+
+<div class="about-card">
+
+<h3>Who Am I?</h3>
+
+<p>
+
+Hello! I'm <b>Anuja Kanase</b>, a passionate DevOps & Cloud Engineer with hands-on experience in AWS, Docker, Kubernetes, Terraform, Jenkins, Linux, and CI/CD.
+
+I enjoy designing scalable cloud infrastructure, automating deployments, containerizing applications, and managing Kubernetes workloads.
+
+</p>
+
+<p>
+
+My goal is to become a Cloud & Platform Engineer capable of building highly available and production-ready cloud infrastructure.
+
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>What I Love ❤️</h3>
+
+<ul>
+
+<li>☁️ AWS Cloud</li>
+
+<li>☸ Kubernetes</li>
+
+<li>🐳 Docker</li>
+
+<li>🚀 CI/CD Pipelines</li>
+
+<li>📦 Terraform</li>
+
+<li>⚙ Linux Administration</li>
+
+<li>📊 Monitoring & Observability</li>
+
+<li>📈 Automation</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- SKILLS -->
+<!-- ========================= -->
+
+<section id="skills">
+
+<h2 class="section-title">
+
+Technical <span>Skills</span>
+
+</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<i class="fab fa-aws"></i>
+<h3>AWS</h3>
+<p>EC2, IAM, VPC, ALB, EKS, S3, CloudWatch</p>
+</div>
+
+<div class="skill-card">
+<i class="fab fa-docker"></i>
+<h3>Docker</h3>
+<p>Images, Containers, Dockerfile, Compose</p>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-network-wired"></i>
+<h3>Kubernetes</h3>
+<p>Deployments, Services, Ingress, Helm</p>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-code"></i>
+<h3>Terraform</h3>
+<p>Infrastructure as Code & Modules</p>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-cogs"></i>
+<h3>Jenkins</h3>
+<p>CI/CD Pipeline Automation</p>
+</div>
+
+<div class="skill-card">
+<i class="fab fa-linux"></i>
+<h3>Linux</h3>
+<p>Shell Scripting & Administration</p>
+</div>
+
+<div class="skill-card">
+<i class="fab fa-github"></i>
+<h3>Git & GitHub</h3>
+<p>Version Control & Collaboration</p>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-chart-line"></i>
+<h3>Monitoring</h3>
+<p>Prometheus & Grafana</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CERTIFICATIONS -->
+<!-- ========================= -->
+
+<section id="certifications">
+
+<h2 class="section-title">
+
+Learning <span>Journey</span>
+
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+<div class="content">
+
+<h3>AWS Cloud Projects</h3>
+
+<p>
+
+Built multiple AWS projects including VPC, S3 Static Website Hosting, Amazon EKS deployments and Infrastructure using Terraform.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+<div class="content">
+
+<h3>DevOps Projects</h3>
+
+<p>
+
+Worked on Docker, Jenkins, SonarQube, Trivy, Kubernetes, Helm, Prometheus and Grafana.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+<div class="content">
+
+<h3>Continuous Learning</h3>
+
+<p>
+
+Actively learning Cloud Native technologies, Platform Engineering and Production-grade Kubernetes.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+/* About */
+
+.about-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+gap:35px;
+
+margin-top:60px;
+
+}
+
+.about-card{
+
+background:rgba(255,255,255,.05);
+
+padding:35px;
+
+border-radius:20px;
+
+backdrop-filter:blur(12px);
+
+transition:.4s;
+
+}
+
+.about-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px #4cc9f0;
+
+}
+
+.about-card h3{
+
+margin-bottom:20px;
+
+color:#4cc9f0;
+
+}
+
+.about-card p{
+
+line-height:1.9;
+
+color:#ddd;
+
+margin-bottom:15px;
+
+}
+
+.about-card ul{
+
+padding-left:20px;
+
+line-height:2;
+
+}
+
+/* Skills */
+
+.skills-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+margin-top:60px;
+
+}
+
+.skill-card{
+
+background:rgba(255,255,255,.05);
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+transition:.4s;
+
+backdrop-filter:blur(12px);
+
+}
+
+.skill-card:hover{
+
+transform:translateY(-10px);
+
+background:#4cc9f0;
+
+color:#07111d;
+
+}
+
+.skill-card i{
+
+font-size:50px;
+
+margin-bottom:20px;
+
+color:#4cc9f0;
+
+}
+
+.skill-card:hover i{
+
+color:#07111d;
+
+}
+
+.skill-card h3{
+
+margin-bottom:15px;
+
+}
+
+/* Timeline */
+
+.timeline{
+
+max-width:900px;
+
+margin:60px auto;
+
+position:relative;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:18px;
+
+top:0;
+
+bottom:0;
+
+width:4px;
+
+background:#4cc9f0;
+
+}
+
+.timeline-item{
+
+display:flex;
+
+gap:30px;
+
+margin-bottom:50px;
+
+}
+
+.circle{
+
+width:40px;
+
+height:40px;
+
+background:#4cc9f0;
+
+border-radius:50%;
+
+flex-shrink:0;
+
+}
+
+.content{
+
+background:rgba(255,255,255,.05);
+
+padding:25px;
+
+border-radius:15px;
+
+flex:1;
+
+transition:.4s;
+
+}
+
+.content:hover{
+
+transform:translateX(10px);
+
+box-shadow:0 0 25px #4cc9f0;
+
+}
+
+.content h3{
+
+margin-bottom:12px;
+
+color:#4cc9f0;
+
+}
+
+.content p{
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+</style>
+
+<!-- ========================= -->
+<!-- PROJECTS SECTION -->
+<!-- ========================= -->
+
+<section id="projects">
+
+<h2 class="section-title">
+My <span>Projects</span>
+</h2>
+
+<p class="project-subtitle">
+Some of my favorite DevOps and Cloud projects built using AWS, Docker, Kubernetes, Terraform and Jenkins.
+</p>
+
+<div class="projects-grid">
+
+<!-- Project 1 -->
+
+<div class="project-card">
+
+<div class="project-header">
+
+<i class="fas fa-film"></i>
+
+<h3>Netflix Clone CI/CD</h3>
+
+</div>
+
+<p>
+
+Automated CI/CD pipeline using Jenkins, SonarQube, Trivy, Docker and DockerHub with security scanning.
+
+</p>
+
+<div class="tech-stack">
+
+<span>Jenkins</span>
+
+<span>Docker</span>
+
+<span>SonarQube</span>
+
+<span>Trivy</span>
+
+<span>AWS</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="https://github.com/yourusername/netflix-clone" target="_blank">
+
+<i class="fab fa-github"></i> GitHub
+
+</a>
+
+<a href="#">
+
+Live Demo
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Project 2 -->
+
+<div class="project-card">
+
+<div class="project-header">
+
+<i class="fas fa-network-wired"></i>
+
+<h3>Three Tier Microservices</h3>
+
+</div>
+
+<p>
+
+Deployed 12 microservices on Amazon EKS using Helm Charts, AWS Load Balancer Controller and EBS CSI Driver.
+
+</p>
+
+<div class="tech-stack">
+
+<span>AWS EKS</span>
+
+<span>Kubernetes</span>
+
+<span>Helm</span>
+
+<span>Docker</span>
+
+<span>Terraform</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="https://github.com/yourusername/three-tier">
+
+<i class="fab fa-github"></i> GitHub
+
+</a>
+
+<a href="#">
+
+Architecture
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Project 3 -->
+
+<div class="project-card">
+
+<div class="project-header">
+
+<i class="fas fa-gamepad"></i>
+
+<h3>2048 Game on AWS EKS</h3>
+
+</div>
+
+<p>
+
+Containerized and deployed the 2048 Game on Amazon EKS using Kubernetes Deployments and Services.
+
+</p>
+
+<div class="tech-stack">
+
+<span>AWS</span>
+
+<span>Docker</span>
+
+<span>Kubernetes</span>
+
+<span>ALB</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="https://github.com/yourusername/2048-eks">
+
+<i class="fab fa-github"></i> GitHub
+
+</a>
+
+<a href="#">
+
+Live
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Project 4 -->
+
+<div class="project-card">
+
+<div class="project-header">
+
+<i class="fab fa-docker"></i>
+
+<h3>2048 Game on Docker</h3>
+
+</div>
+
+<p>
+
+Built Docker image with Nginx and deployed the 2048 Game as a containerized web application.
+
+</p>
+
+<div class="tech-stack">
+
+<span>Docker</span>
+
+<span>Nginx</span>
+
+<span>Ubuntu</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="https://github.com/yourusername/docker-2048">
+
+<i class="fab fa-github"></i> GitHub
+
+</a>
+
+<a href="#">
+
+Docker Hub
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Project 5 -->
+
+<div class="project-card">
+
+<div class="project-header">
+
+<i class="fas fa-cloud"></i>
+
+<h3>AWS VPC using Terraform</h3>
+
+</div>
+
+<p>
+
+Provisioned reusable AWS networking infrastructure with Terraform modules including VPC, ALB, EC2 and S3.
+
+</p>
+
+<div class="tech-stack">
+
+<span>AWS</span>
+
+<span>Terraform</span>
+
+<span>VPC</span>
+
+<span>EC2</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="https://github.com/yourusername/aws-vpc">
+
+<i class="fab fa-github"></i> GitHub
+
+</a>
+
+<a href="#">
+
+Diagram
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Project 6 -->
+
+<div class="project-card">
+
+<div class="project-header">
+
+<i class="fas fa-globe"></i>
+
+<h3>S3 Static Website Hosting</h3>
+
+</div>
+
+<p>
+
+Hosted this portfolio on Amazon S3 using Terraform Infrastructure as Code with static website hosting enabled.
+
+</p>
+
+<div class="tech-stack">
+
+<span>S3</span>
+
+<span>Terraform</span>
+
+<span>HTML</span>
+
+<span>Cloud</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="https://github.com/yourusername/s3-static">
+
+<i class="fab fa-github"></i> GitHub
+
+</a>
+
+<a href="#">
+
+Website
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.project-subtitle{
+
+text-align:center;
+
+max-width:800px;
+
+margin:15px auto 50px;
+
+color:#ccc;
+
+font-size:18px;
+
+line-height:1.7;
+
+}
+
+.projects-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+gap:35px;
+
+}
+
+.project-card{
+
+background:rgba(255,255,255,.05);
+
+padding:30px;
+
+border-radius:22px;
+
+transition:.4s;
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.project-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 0 30px rgba(76,201,240,.5);
+
+}
+
+.project-header{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:20px;
+
+}
+
+.project-header i{
+
+font-size:34px;
+
+color:#4cc9f0;
+
+}
+
+.project-header h3{
+
+font-size:24px;
+
+}
+
+.project-card p{
+
+line-height:1.8;
+
+color:#ddd;
+
+margin-bottom:25px;
+
+}
+
+.tech-stack{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+margin-bottom:25px;
+
+}
+
+.tech-stack span{
+
+padding:8px 14px;
+
+background:#162238;
+
+border-radius:20px;
+
+font-size:14px;
+
+color:#4cc9f0;
+
+}
+
+.project-buttons{
+
+display:flex;
+
+gap:15px;
+
+}
+
+.project-buttons a{
+
+flex:1;
+
+text-align:center;
+
+padding:12px;
+
+background:#4cc9f0;
+
+color:#05111d;
+
+font-weight:600;
+
+text-decoration:none;
+
+border-radius:30px;
+
+transition:.3s;
+
+}
+
+.project-buttons a:hover{
+
+transform:translateY(-4px);
+
+background:#7dd3fc;
+
+}
+
+</style>
+
+<!-- ========================= -->
+<!-- CONTACT SECTION -->
+<!-- ========================= -->
+
+<section id="contact">
+
+<h2 class="section-title">
+Get In <span>Touch</span>
+</h2>
+
+<p class="contact-text">
+I'm always open to discussing DevOps, Cloud, Kubernetes, AWS, or exciting opportunities.
+Let's connect!
+</p>
+
+<div class="contact-container">
+
+<div class="contact-card">
+<i class="fas fa-envelope"></i>
+<h3>Email</h3>
+<p>anujakanase99@gmail.com</p>
+</div>
+
+<div class="contact-card">
+<i class="fab fa-linkedin"></i>
+<h3>LinkedIn</h3>
+<a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank">
+Visit Profile
+</a>
+</div>
+
+<div class="contact-card">
+<i class="fab fa-github"></i>
+<h3>GitHub</h3>
+<a href="https://github.com/YOUR-GITHUB" target="_blank">
+View Projects
+</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Anuja Kanase</h2>
+
+<p>
+Designed & Built with ❤️ using HTML, CSS & JavaScript.
+Hosted on AWS S3 using Terraform.
+</p>
+
+<div class="footer-icons">
+
+<a href="https://github.com/YOUR-GITHUB">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://linkedin.com/in/YOUR-LINKEDIN">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:anujakanase99@gmail.com">
+<i class="fas fa-envelope"></i>
+</a>
+
+</div>
+
+<p class="copyright">
+
+© 2026 Anuja Kanase. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<style>
+
+/* Contact */
+
+.contact-text{
+
+text-align:center;
+
+max-width:700px;
+
+margin:20px auto 60px;
+
+line-height:1.8;
+
+color:#d5d5d5;
+
+}
+
+.contact-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.contact-card{
+
+background:rgba(255,255,255,.05);
+
+padding:40px;
+
+text-align:center;
+
+border-radius:20px;
+
+backdrop-filter:blur(12px);
+
+transition:.4s;
+
+}
+
+.contact-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px #4cc9f0;
+
+}
+
+.contact-card i{
+
+font-size:45px;
+
+color:#4cc9f0;
+
+margin-bottom:20px;
+
+}
+
+.contact-card h3{
+
+margin-bottom:15px;
+
+}
+
+.contact-card a{
+
+text-decoration:none;
+
+color:#4cc9f0;
+
+font-weight:600;
+
+}
+
+/* Footer */
+
+footer{
+
+margin-top:80px;
+
+padding:60px 20px;
+
+background:#08101d;
+
+text-align:center;
+
+}
+
+footer h2{
+
+font-size:32px;
+
+margin-bottom:15px;
+
+color:#4cc9f0;
+
+}
+
+footer p{
+
+color:#ccc;
+
+margin:10px 0;
+
+}
+
+.footer-icons{
+
+margin:30px 0;
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+}
+
+.footer-icons a{
+
+font-size:28px;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.footer-icons a:hover{
+
+color:#4cc9f0;
+
+transform:translateY(-6px);
+
+}
+
+.copyright{
+
+margin-top:25px;
+
+font-size:14px;
+
+color:#888;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+}
+
+.hero-left h1{
+
+font-size:48px;
+
+}
+
+.photo{
+
+width:280px;
+
+height:280px;
+
+}
+
+header{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+nav{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+nav a{
+
+margin:10px;
+
+}
+
+}
+
+</style>
+
+<script>
+
+/* Typing Animation */
+
+const roles=[
+"DevOps Engineer",
+"AWS Cloud Engineer",
+"Kubernetes Enthusiast",
+"Terraform Practitioner",
+"Docker Expert"
+];
+
+let roleIndex=0;
+let charIndex=0;
+let deleting=false;
+
+const typing=document.getElementById("typing");
+
+function type(){
+
+const current=roles[roleIndex];
+
+if(!deleting){
+
+typing.textContent=current.substring(0,charIndex++);
+
+if(charIndex>current.length){
+
+deleting=true;
+
+setTimeout(type,1200);
+
+return;
+
+}
+
+}
+
+else{
+
+typing.textContent=current.substring(0,charIndex--);
+
+if(charIndex===0){
+
+deleting=false;
+
+roleIndex=(roleIndex+1)%roles.length;
+
+}
+
+}
+
+setTimeout(type,deleting?60:120);
+
+}
+
+type();
+
+/* Scroll Animation */
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section,.project-card,.skill-card,.about-card,.contact-card").forEach(el=>{
+
+el.style.opacity="0";
+
+el.style.transform="translateY(40px)";
+
+el.style.transition="all .8s ease";
+
+observer.observe(el);
+
+});
+
+</script>
+
+</body>
+
+</html>
