@@ -19,34 +19,6 @@ The website is built with **HTML, CSS, and JavaScript** and includes:
 
 ---
 
-## 📸 Project Demo
-
-> **Homepage**
-
-<p align="center">
-  <img src="screenshots/homepage.png" alt="Portfolio Homepage" width="90%">
-</p>
-
-> **About Section**
-
-<p align="center">
-  <img src="screenshots/about.png" alt="About Section" width="90%">
-</p>
-
-> **Projects Section**
-
-<p align="center">
-  <img src="screenshots/projects.png" alt="Projects Section" width="90%">
-</p>
-
-> **Contact Section**
-
-<p align="center">
-  <img src="screenshots/contact.png" alt="Contact Section" width="90%">
-</p>
-
----
-
 # 🏗 Architecture
 
 ```
